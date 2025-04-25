@@ -42,3 +42,60 @@ Una respuesta incorrecta termina el juego.
 
 
 ## Estructura del proyecto
+
+El programa está dividido en módulos funcionales para facilitar la lectura  y mantenimiento:
+
+### 1 . Importaciones  
+
+Vamos a hacer uso de las siguientes librerías;  
+ - **os**:  
+ para poder ejecutar comandos del sistema operativo en el que estemos.
+
+ - **random**:  
+ para generar números y operaciones aleatorias.
+
+ - **readchar**:  
+ para detectar las teclas de direcciones UP/DOWN y así navegar entre las opciones.
+
+### 2 . Menús  
+
+Vamos a definir funciones que tendrán la lógica de mostrar un menú con sus opciones a partir de los parámetros recibidos, lo que brinda flexibilidad ya que el menú podrá adaptarse a distintos contextos, como veremos más adelante en *menu_principal*.
+
+ - *clearConsole()*:  
+ Limpia la consola según el Sistema operativo.
+
+ - *mostrar_menu(titulo, opciones, seleccionada, nombre_equipo)*:  
+ Muestra un menú interactivo a partir de los parametros recibidos.
+
+ - *navegar_menu(titulo, opciones, nombre_equipo)*:  
+Hacemos uso de la función *mostrar_menu* y la librería *readchar* para permitir la navegación por el menú con las teclas UP/DOWN y ENTER.
+
+### 3 . Juego  
+
+Definimos las funciones encargadas de comenzar el juego.
+
+ - *juego(dificultad)*:  
+ Inicia el juego según la dificultad recibida, también se encarga de mostra preguntas con sus respectivas opciones y acumula puntos al responder bien.
+
+ - *decimal_a_binario(numero)*:  
+ Convierte un número decimal a binario.
+
+ - *generar_pregunta(dificultad)*:  
+ Encargada de generar preguntas aleatorias según la dificultad seleccionada:
+   - *Fácil: Convertir binario a decimal.*
+
+   - *Medio: Operaciones de suma/resta con resultado en binario.*
+
+   - *Difícil: Operaciones de multiplicación/división con resultado en binario.*
+
+ - *generar_opciones(correcta, base)*:  
+ Esta función es lancargada de crear una lista de cuatro opciones, con la correcta y tres falsas, en binario o decimal.
+
+ ### 4 . Flujo principal  
+
+ - *menu_principal()*:  
+ Mostramos el menú principal del juego con las opciones *Jugar*, *Cambiar dificultad* y *Salir*.
+ 
+ ### 5 . Inicio  
+
+Nos aseguramos de iniciar el juego llamando a la función *menu_principal()* solo al ejecutar este archivo.
