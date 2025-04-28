@@ -99,3 +99,24 @@ Definimos las funciones encargadas de comenzar el juego.
  ### 5 . Inicio  
 
 Nos aseguramos de iniciar el juego llamando a la función *menu_principal()* solo al ejecutar este archivo.
+
+## Uso de IA
+
+Durante el desarrollo del proyecto se hizo uso ético de la herramienta de IA(Inteligencia Artificial) ChatGPT, para complementar en el proceso de análisis y búsqueda de soluciones técnicas.
+Nuestro objetivo fue potenciar la creatividad y eficiencia sin reemplazar el aporte personal en la toma de decisiones y en la implementación del código final.
+
+Para el caso de navegación del menú con el teclado las IA nos dió a conocer la librería keyboard, lo que no resultó del todo bien ya que nos dió problemas para detectar las teclas de direcciones(UP/DOWN). Luego nos dió a conocer la librería readchar, que al final optamos por esa como mencionamos previamente:
+
+Ajunto evidencia:  
+
+**Evidencia 1:**  
+
+  ![1](/assets/image.png)  
+
+**Evidencia 2:**  
+
+  ![2](/assets/image2.png)  
+
+**Evidencia 3:**  
+
+  ![3](/assets/image3.png)
